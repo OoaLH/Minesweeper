@@ -35,17 +35,24 @@ class InfoViewController: UIViewController {
           // var originY:CGFloat = 10.0
             for info in fetchedObjects{
                 let label = UILabel()
-                label.frame=CGRect(x: 87, y: (rank-1)*40, width: 200, height: 40)
+                label.frame=CGRect(x: 87, y: (rank-1)*40, width: 100, height: 40)
+                let label2 = UILabel()
+                label2.frame=CGRect(x: 240, y: (rank-1)*40, width: 100, height: 40)
                 rank+=1
                 if info.seconds>=10{
-                label.text=String(info.minutes)+":"+String(info.seconds)+"                             "+String(info.bombnum)
+                label.text=String(info.minutes)+":"+String(info.seconds)
+                
                 }
                 else{
-                    label.text=String(info.minutes)+":"+"0"+String(info.seconds)+"                             "+String(info.bombnum)
+                    label.text=String(info.minutes)+":"+"0"+String(info.seconds)
+                    
                 }
+                label2.text=String(info.bombnum)
                 label.textColor=UIColor.blue
-                label.isUserInteractionEnabled = true
+                label2.textColor=UIColor.blue
+                //label.isUserInteractionEnabled = true
                 main.addSubview(label)
+                main.addSubview(label2)
               
             }
               main.contentSize = CGSize(width:main.frame.size.width,height:CGFloat((rank-1)*40))
