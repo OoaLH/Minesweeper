@@ -170,7 +170,7 @@ class BombDataManager {
                         extend(num: num + 10)
                     }
                 }
-                else if num <= 8 && num % 9 != 0 && num % 9 != 8 && num >= 0 {
+                else if num < 8 && num > 0 {
                     if !dog[num + 1] {
                         extend(num: num + 1)
                     }
@@ -187,7 +187,7 @@ class BombDataManager {
                         extend(num: num + 8)
                     }
                 }
-                else if(num == 0) {
+                else if num == 0 {
                     if !dog[1]{
                         extend(num: 1)
                     }
@@ -221,8 +221,8 @@ class BombDataManager {
                     }
                 }
                 else if num == 72 {
-                    if !dog[num - 1] {
-                        extend(num: num - 1)
+                    if !dog[num + 1] {
+                        extend(num: num + 1)
                     }
                     if !dog[num - 8] {
                         extend(num: num - 8)
