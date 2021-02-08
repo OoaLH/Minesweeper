@@ -23,33 +23,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViews()
         BombDataManager.shared.delegate = self
-    }
-    
-    func configureViews() {
-
-    }
-    
-    func configureData() {
-        BombDataManager.shared.refreshData()
-        BombDataManager.shared.genetateBomb()
-        for x in 0...80 {
-            BombDataManager.shared.countBomb(bomb: BombDataManager.shared.isBomb[x], x: x)
-        }
     }
     
     @IBAction func newRound(_ sender: UIButton) {
         time = 0
+        timer?.invalidate()
         for i in buttonCollectionView.visibleCells {
             let cell = i as! ButtonCollectionViewCell
             cell.status = .closed
         }
-        configureData()
-        BombDataManager.shared.playStatus = .playing
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] (timer) in
-            self?.time += 1
-        })
+        BombDataManager.shared.playStatus = .started
     }
 }
 
@@ -86,7 +70,10 @@ extension ViewController: BombDataManagerDelegate {
     }
     
     func startPlaying() {
-        statusLabel.text = String(BombDataManager.shared.bombs)
+        statusLabel.text = "Number of bombs: " + String(BombDataManager.shared.bombs)
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] (timer) in
+            self?.time += 1
+        })
     }
     
     func openCell(index: Int) {
@@ -97,5 +84,9 @@ extension ViewController: BombDataManagerDelegate {
         default:
             cell.status = .opened(BombDataManager.shared.bombNumber[index])
         }
+    }
+    
+    func newRound() {
+        statusLabel.text = "Started!"
     }
 }

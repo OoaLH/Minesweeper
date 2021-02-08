@@ -50,7 +50,7 @@ class ButtonCollectionViewCell: UICollectionViewCell {
     
     @IBAction func mine(_ sender: UIButton) {
         switch BombDataManager.shared.playStatus {
-        case .playing:
+        case .started, .playing:
             switch status {
             case .flaged:
                 status = .closed
@@ -65,7 +65,7 @@ class ButtonCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func flag() {
-        if BombDataManager.shared.playStatus == .playing {
+        if BombDataManager.shared.playStatus == .playing || BombDataManager.shared.playStatus == .started {
             status = .flaged
         }
     }

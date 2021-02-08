@@ -12,12 +12,14 @@ enum PlayStatus {
     case win
     case lose
     case notStarted
+    case started
 }
 protocol BombDataManagerDelegate {
     func openCell(index: Int)
     func win()
     func lose()
     func startPlaying()
+    func newRound()
 }
 class BombDataManager {
     static let shared = BombDataManager()
@@ -29,7 +31,10 @@ class BombDataManager {
     var dog = [Bool](repeating: false, count: 81)
     var opened = 0 {
         didSet {
-            if opened == 81 - bombs {
+            if opened == 1 {
+                playStatus = .playing
+            }
+            else if opened == 81 - bombs {
                 playStatus = .win
             }
         }
@@ -43,27 +48,38 @@ class BombDataManager {
                 delegate?.lose()
             case .playing:
                 delegate?.startPlaying()
+            case .started:
+                opened = 0
+                delegate?.newRound()
             default:
                 return
             }
         }
     }
+    
+    func configureData(first: Int) {
+        refreshData()
+        genetateBomb(first: first)
+        for x in 0...80 {
+            BombDataManager.shared.countBomb(bomb: BombDataManager.shared.isBomb[x], x: x)
+        }
+    }
+    
     func refreshData() {
         isBomb = [Bool](repeating: false, count: 81)
         bombNumber = [Int](repeating: 0, count: 81)
         bombs = 0
         dog = [Bool](repeating: false, count: 81)
-        opened = 0
     }
     
-    func genetateBomb() {
-        for index in 0...80
-        {
+    func genetateBomb(first: Int) {
+        for index in 0...80 {
             let temp = Int(arc4random_uniform(4))
             if temp == 0 {
                 isBomb[index] = true
             }
         }
+        isBomb[first] = false
     }
     
     func countBomb(bomb: Bool, x: Int) {
@@ -141,6 +157,9 @@ class BombDataManager {
     
     func extend(num: Int) {
         if num >= 0 && num <= 80 {
+            if opened == 0 {
+                configureData(first: num)
+            }
             delegate?.openCell(index: num)
             if bombNumber[num] == 0 {
                 dog[num] = true
