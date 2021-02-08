@@ -7,11 +7,13 @@
 
 import Foundation
 import UIKit
+
 enum CellState {
     case opened(Int)
     case closed
     case flaged
 }
+
 class ButtonCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var button: UIButton!
     var index: Int = 0

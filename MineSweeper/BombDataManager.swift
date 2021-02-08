@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 enum PlayStatus {
     case playing
     case win
@@ -14,6 +15,7 @@ enum PlayStatus {
     case notStarted
     case started
 }
+
 protocol BombDataManagerDelegate {
     func openCell(index: Int)
     func win()
