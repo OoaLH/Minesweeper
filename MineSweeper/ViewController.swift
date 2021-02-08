@@ -61,11 +61,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SingleButton", for: indexPath) as! ButtonCollectionViewCell
         cell.index = indexPath.item
+        cell.configureButton()
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.frame.width - 8)/9, height: (collectionView.frame.height - 8)/9)
+        return CGSize(width: (UIScreen.main.bounds.width - 48)/9, height: (UIScreen.main.bounds.width - 48)/9)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
     }
 }
 
@@ -81,7 +86,7 @@ extension ViewController: BombDataManagerDelegate {
     }
     
     func startPlaying() {
-        statusLabel.text = "Start!"
+        statusLabel.text = String(BombDataManager.shared.bombs)
     }
     
     func openCell(index: Int) {

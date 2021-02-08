@@ -40,10 +40,12 @@ class ButtonCollectionViewCell: UICollectionViewCell {
                     button.setTitle(String(num), for: .normal)
                     button.backgroundColor = UIColor.white
                 }
-                print(BombDataManager.shared.opened)
-                print(BombDataManager.shared.bombs)
             }
         }
+    }
+    
+    func configureButton() {
+        button.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(flag)))
     }
     
     @IBAction func mine(_ sender: UIButton) {
@@ -61,4 +63,11 @@ class ButtonCollectionViewCell: UICollectionViewCell {
             return
         }
     }
+    
+    @objc func flag() {
+        if BombDataManager.shared.playStatus == .playing {
+            status = .flaged
+        }
+    }
+    
 }
