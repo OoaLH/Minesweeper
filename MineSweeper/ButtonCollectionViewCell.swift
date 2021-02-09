@@ -22,10 +22,12 @@ class ButtonCollectionViewCell: UICollectionViewCell {
             switch status {
             case .closed:
                 button.setTitle("", for: .normal)
-                button.backgroundColor = UIColor.systemBlue
+                button.backgroundColor = UIColor.systemOrange
             case .flaged:
                 button.setTitle("🚩", for: .normal)
-                button.backgroundColor = UIColor.systemBlue
+                button.backgroundColor = UIColor.systemOrange
+                let generator = UIImpactFeedbackGenerator(style: .heavy)
+                generator.impactOccurred()
             case .opened(let num):
                 if num >= 9 {
                     button.setTitle("💣", for: .normal)

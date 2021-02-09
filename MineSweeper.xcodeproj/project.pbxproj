@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A401D0C125D0258A005CA6A5 /* BombDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D0C025D0258A005CA6A5 /* BombDataManager.swift */; };
+		A45B816A25D2EFDA00B294A5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B816925D2EFDA00B294A5 /* HomeViewController.swift */; };
+		A45B816F25D2F43F00B294A5 /* InstrumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B816E25D2F43F00B294A5 /* InstrumentViewController.swift */; };
 		A4A6FBCE25D01CE800126B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6FBCD25D01CE800126B41 /* AppDelegate.swift */; };
 		A4A6FBD025D01CE800126B41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6FBCF25D01CE800126B41 /* SceneDelegate.swift */; };
 		A4A6FBD225D01CE800126B41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6FBD125D01CE800126B41 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		A401D0C025D0258A005CA6A5 /* BombDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BombDataManager.swift; sourceTree = "<group>"; };
+		A45B816925D2EFDA00B294A5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A45B816E25D2F43F00B294A5 /* InstrumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentViewController.swift; sourceTree = "<group>"; };
 		A4A6FBCA25D01CE800126B41 /* MineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A6FBCD25D01CE800126B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A6FBCF25D01CE800126B41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,8 +112,10 @@
 				A4A6FBCD25D01CE800126B41 /* AppDelegate.swift */,
 				A4A6FBCF25D01CE800126B41 /* SceneDelegate.swift */,
 				A4A6FBD125D01CE800126B41 /* ViewController.swift */,
+				A45B816925D2EFDA00B294A5 /* HomeViewController.swift */,
 				A4A6FC0325D01E1D00126B41 /* ButtonCollectionViewCell.swift */,
 				A401D0C025D0258A005CA6A5 /* BombDataManager.swift */,
+				A45B816E25D2F43F00B294A5 /* InstrumentViewController.swift */,
 				A4A6FBD325D01CE800126B41 /* Main.storyboard */,
 				A4A6FBD925D01CEA00126B41 /* Assets.xcassets */,
 				A4A6FBDB25D01CEA00126B41 /* LaunchScreen.storyboard */,
@@ -268,10 +274,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A6FC0425D01E1D00126B41 /* ButtonCollectionViewCell.swift in Sources */,
+				A45B816F25D2F43F00B294A5 /* InstrumentViewController.swift in Sources */,
 				A401D0C125D0258A005CA6A5 /* BombDataManager.swift in Sources */,
 				A4A6FBD825D01CE800126B41 /* MineSweeper.xcdatamodeld in Sources */,
 				A4A6FBD225D01CE800126B41 /* ViewController.swift in Sources */,
 				A4A6FBCE25D01CE800126B41 /* AppDelegate.swift in Sources */,
+				A45B816A25D2EFDA00B294A5 /* HomeViewController.swift in Sources */,
 				A4A6FBD025D01CE800126B41 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,14 +18,19 @@ class ViewController: UIViewController {
             timeLabel.text = String(Int(time/60)) + ":" + second
         }
     }
+    @IBOutlet weak var newRoundButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var buttonCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViews()
         BombDataManager.shared.delegate = self
     }
     
+    func configureViews() {
+        newRoundButton.layer.cornerRadius = newRoundButton.frame.height/2
+    }
     @IBAction func newRound(_ sender: UIButton) {
         time = 0
         timer?.invalidate()
@@ -35,6 +40,11 @@ class ViewController: UIViewController {
         }
         BombDataManager.shared.playStatus = .started
     }
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -79,10 +89,10 @@ extension ViewController: BombDataManagerDelegate {
     func openCell(index: Int) {
         let cell = buttonCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! ButtonCollectionViewCell
         switch cell.status {
-        case .opened(_):
-            break
-        default:
+        case .closed:
             cell.status = .opened(BombDataManager.shared.bombNumber[index])
+        default:
+            return
         }
     }
     
