@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum CellState {
+enum CellState: Equatable {
     case opened(Int)
     case closed
     case flaged
@@ -43,6 +43,26 @@ class ButtonCollectionViewCell: UICollectionViewCell {
                     BombDataManager.shared.opened += 1
                     button.setTitle(String(num), for: .normal)
                     button.backgroundColor = UIColor.white
+                    switch num {
+                    case 1:
+                        button.setTitleColor(UIColor.systemBlue, for: .normal)
+                    case 2:
+                        button.setTitleColor(UIColor.systemGreen, for: .normal)
+                    case 3:
+                        button.setTitleColor(UIColor.systemRed, for: .normal)
+                    case 4:
+                        button.setTitleColor(UIColor.systemYellow, for: .normal)
+                    case 5:
+                        button.setTitleColor(UIColor.systemOrange, for: .normal)
+                    case 6:
+                        button.setTitleColor(UIColor.systemTeal, for: .normal)
+                    case 7:
+                        button.setTitleColor(UIColor.black, for: .normal)
+                    case 8:
+                        button.setTitleColor(UIColor.systemGray, for: .normal)
+                    default:
+                        return
+                    }
                 }
             }
         }
@@ -69,9 +89,8 @@ class ButtonCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func flag() {
-        if BombDataManager.shared.playStatus == .playing || BombDataManager.shared.playStatus == .started {
+        if (BombDataManager.shared.playStatus == .playing || BombDataManager.shared.playStatus == .started) && status == .closed {
             status = .flaged
         }
     }
-    
 }

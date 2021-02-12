@@ -23,6 +23,7 @@ protocol BombDataManagerDelegate {
     func startPlaying()
     func newRound()
 }
+
 class BombDataManager {
     static let shared = BombDataManager()
     private init() {}
