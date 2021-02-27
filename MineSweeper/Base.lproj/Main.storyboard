@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="1546" y="94"/>
         </scene>
-        <!--Instrument View Controller-->
+        <!--Instruction View Controller-->
         <scene sceneID="SMR-cB-XAs">
             <objects>
-                <viewController id="rv7-SS-mXr" customClass="InstrumentViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rv7-SS-mXr" customClass="InstructionViewController" customModule="MineSweeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kpq-g9-Coa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,7 +170,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="e3m-04-tR6"/>
                     <connections>
-                        <outlet property="instruments" destination="mzO-KQ-VJL" id="WXN-io-7YU"/>
+                        <outlet property="instruction" destination="mzO-KQ-VJL" id="RNU-3J-soU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khu-xt-1No" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

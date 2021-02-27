@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     func configureViews() {
         newRoundButton.layer.cornerRadius = newRoundButton.frame.height/2
     }
+    
     @IBAction func newRound(_ sender: UIButton) {
         time = 0
         timer?.invalidate()

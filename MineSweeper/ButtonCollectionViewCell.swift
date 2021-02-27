@@ -70,6 +70,7 @@ class ButtonCollectionViewCell: UICollectionViewCell {
     
     func configureButton() {
         button.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(flag)))
+        button.layer.cornerRadius = 2
     }
     
     @IBAction func mine(_ sender: UIButton) {
