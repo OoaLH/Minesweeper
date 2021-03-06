@@ -30,6 +30,9 @@ class ViewController: UIViewController {
     
     func configureViews() {
         newRoundButton.layer.cornerRadius = newRoundButton.frame.height/2
+        if UIDevice.current.orientation == .landscapeLeft {
+            
+        }
     }
     
     @IBAction func newRound(_ sender: UIButton) {
