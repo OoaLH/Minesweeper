@@ -18,6 +18,6 @@ Tap a flag(🚩) to remove the flag.
 
 The total number of bombs and a timer will be shown on top of all fields.
 
-Enjoy!🤪"
+Enjoy!🤪
 ## Contact
 If you have any questions please contact me at zhangyifansugar@gmail.com
