@@ -27,11 +27,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configureViews()
         BombDataManager.shared.delegate = self
+        bannerView.load(GADRequest())
     }
     
     func configureViews() {
         newRoundButton.layer.cornerRadius = newRoundButton.frame.height/2
+        
+        view.addSubview(bannerView)
+        NSLayoutConstraint.activate([
+            bannerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bannerView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
+        ])
     }
+    
+    lazy var bannerView: GADBannerView = {
+        let view = GADBannerView(adSize: kGADAdSizeBanner)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        view.rootViewController = self
+        view.delegate = self
+        return view
+    }()
     
     @IBAction func newRound(_ sender: UIButton) {
         time = 0
@@ -47,6 +63,32 @@ class ViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension ViewController: GADBannerViewDelegate {
+//    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+//      print("bannerViewDidReceiveAd")
+//    }
+//
+//    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+//      print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+//    }
+//
+//    func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
+//      print("bannerViewDidRecordImpression")
+//    }
+//
+//    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
+//      print("bannerViewWillPresentScreen")
+//    }
+//
+//    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
+//      print("bannerViewWillDIsmissScreen")
+//    }
+//
+//    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
+//      print("bannerViewDidDismissScreen")
+//    }
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
