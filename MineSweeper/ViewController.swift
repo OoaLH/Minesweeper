@@ -5,6 +5,7 @@
 //  Created by 张翌璠 on 2021-02-07.
 //
 
+import GoogleMobileAds
 import UIKit
 
 class ViewController: UIViewController {
