@@ -8,9 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     @IBOutlet weak var aboutButton: UIButton!
     @IBOutlet weak var instrumentButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
@@ -23,6 +25,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func aboutMe(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "https://github.com/OoaLH")!, options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: "https://github.com/OoaLH")!)
     }
 }

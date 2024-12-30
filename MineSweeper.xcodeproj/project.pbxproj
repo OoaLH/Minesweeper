@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8AD9F68580FC8BB5D3FF6FBB /* Pods_MineSweeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E171413A1F5F09463510CF3 /* Pods_MineSweeper.framework */; };
-		A401D0C125D0258A005CA6A5 /* BombDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D0C025D0258A005CA6A5 /* BombDataManager.swift */; };
+		A401D0C125D0258A005CA6A5 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401D0C025D0258A005CA6A5 /* GameManager.swift */; };
 		A45B816A25D2EFDA00B294A5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B816925D2EFDA00B294A5 /* HomeViewController.swift */; };
 		A45B816F25D2F43F00B294A5 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B816E25D2F43F00B294A5 /* InstructionViewController.swift */; };
 		A4A6FBCE25D01CE800126B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6FBCD25D01CE800126B41 /* AppDelegate.swift */; };
@@ -19,17 +18,11 @@
 		A4A6FBDA25D01CEA00126B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A6FBD925D01CEA00126B41 /* Assets.xcassets */; };
 		A4A6FBDD25D01CEA00126B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A6FBDB25D01CEA00126B41 /* LaunchScreen.storyboard */; };
 		A4A6FC0425D01E1D00126B41 /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6FC0325D01E1D00126B41 /* ButtonCollectionViewCell.swift */; };
+		E3D4D7C12D22921C00AA3F29 /* BombCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4D7C02D22920B00AA3F29 /* BombCellDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E171413A1F5F09463510CF3 /* Pods_MineSweeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MineSweeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F48AC74413043CBCD415B91 /* Pods_MineSweeper_MineSweeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MineSweeper_MineSweeperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FB7EED5AD2E89F53D26D104 /* Pods-MineSweeperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineSweeperTests.debug.xcconfig"; path = "Target Support Files/Pods-MineSweeperTests/Pods-MineSweeperTests.debug.xcconfig"; sourceTree = "<group>"; };
-		325FAB495BEB805A0A8D046E /* Pods_MineSweeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MineSweeperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		33FAD72940F6069B1E32BB9B /* Pods-MineSweeperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineSweeperTests.release.xcconfig"; path = "Target Support Files/Pods-MineSweeperTests/Pods-MineSweeperTests.release.xcconfig"; sourceTree = "<group>"; };
-		6A9C9BD66AB8A6FE7066AB57 /* Pods-MineSweeper-MineSweeperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineSweeper-MineSweeperUITests.release.xcconfig"; path = "Target Support Files/Pods-MineSweeper-MineSweeperUITests/Pods-MineSweeper-MineSweeperUITests.release.xcconfig"; sourceTree = "<group>"; };
-		76AF3CD9E477D1B2C6800AEC /* Pods-MineSweeper-MineSweeperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineSweeper-MineSweeperUITests.debug.xcconfig"; path = "Target Support Files/Pods-MineSweeper-MineSweeperUITests/Pods-MineSweeper-MineSweeperUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A401D0C025D0258A005CA6A5 /* BombDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BombDataManager.swift; sourceTree = "<group>"; };
+		A401D0C025D0258A005CA6A5 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		A45B816925D2EFDA00B294A5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A45B816E25D2F43F00B294A5 /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		A4A6FBCA25D01CE800126B41 /* MineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,8 +35,7 @@
 		A4A6FBDC25D01CEA00126B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4A6FBDE25D01CEA00126B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A6FC0325D01E1D00126B41 /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
-		C93C3985FD1106767CF0FC8F /* Pods-MineSweeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineSweeper.release.xcconfig"; path = "Target Support Files/Pods-MineSweeper/Pods-MineSweeper.release.xcconfig"; sourceTree = "<group>"; };
-		D5C0F75653C248389C70FE36 /* Pods-MineSweeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineSweeper.debug.xcconfig"; path = "Target Support Files/Pods-MineSweeper/Pods-MineSweeper.debug.xcconfig"; sourceTree = "<group>"; };
+		E3D4D7C02D22920B00AA3F29 /* BombCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BombCellDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,30 +43,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD9F68580FC8BB5D3FF6FBB /* Pods_MineSweeper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05F3E4A2A86A1A119F876558 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0E171413A1F5F09463510CF3 /* Pods_MineSweeper.framework */,
-				1F48AC74413043CBCD415B91 /* Pods_MineSweeper_MineSweeperUITests.framework */,
-				325FAB495BEB805A0A8D046E /* Pods_MineSweeperTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		A4A6FBC125D01CE800126B41 = {
 			isa = PBXGroup;
 			children = (
 				A4A6FBCC25D01CE800126B41 /* MineSweeper */,
 				A4A6FBCB25D01CE800126B41 /* Products */,
-				A5D77F303FE94DA6C5E60515 /* Pods */,
-				05F3E4A2A86A1A119F876558 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,32 +69,20 @@
 			isa = PBXGroup;
 			children = (
 				A4A6FBCD25D01CE800126B41 /* AppDelegate.swift */,
+				A4A6FBD925D01CEA00126B41 /* Assets.xcassets */,
+				E3D4D7C02D22920B00AA3F29 /* BombCellDataModel.swift */,
+				A4A6FC0325D01E1D00126B41 /* ButtonCollectionViewCell.swift */,
+				A401D0C025D0258A005CA6A5 /* GameManager.swift */,
+				A45B816925D2EFDA00B294A5 /* HomeViewController.swift */,
+				A4A6FBDE25D01CEA00126B41 /* Info.plist */,
+				A45B816E25D2F43F00B294A5 /* InstructionViewController.swift */,
+				A4A6FBDB25D01CEA00126B41 /* LaunchScreen.storyboard */,
+				A4A6FBD325D01CE800126B41 /* Main.storyboard */,
+				A4A6FBD625D01CE800126B41 /* MineSweeper.xcdatamodeld */,
 				A4A6FBCF25D01CE800126B41 /* SceneDelegate.swift */,
 				A4A6FBD125D01CE800126B41 /* ViewController.swift */,
-				A45B816925D2EFDA00B294A5 /* HomeViewController.swift */,
-				A4A6FC0325D01E1D00126B41 /* ButtonCollectionViewCell.swift */,
-				A401D0C025D0258A005CA6A5 /* BombDataManager.swift */,
-				A45B816E25D2F43F00B294A5 /* InstructionViewController.swift */,
-				A4A6FBD325D01CE800126B41 /* Main.storyboard */,
-				A4A6FBD925D01CEA00126B41 /* Assets.xcassets */,
-				A4A6FBDB25D01CEA00126B41 /* LaunchScreen.storyboard */,
-				A4A6FBDE25D01CEA00126B41 /* Info.plist */,
-				A4A6FBD625D01CE800126B41 /* MineSweeper.xcdatamodeld */,
 			);
 			path = MineSweeper;
-			sourceTree = "<group>";
-		};
-		A5D77F303FE94DA6C5E60515 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D5C0F75653C248389C70FE36 /* Pods-MineSweeper.debug.xcconfig */,
-				C93C3985FD1106767CF0FC8F /* Pods-MineSweeper.release.xcconfig */,
-				76AF3CD9E477D1B2C6800AEC /* Pods-MineSweeper-MineSweeperUITests.debug.xcconfig */,
-				6A9C9BD66AB8A6FE7066AB57 /* Pods-MineSweeper-MineSweeperUITests.release.xcconfig */,
-				1FB7EED5AD2E89F53D26D104 /* Pods-MineSweeperTests.debug.xcconfig */,
-				33FAD72940F6069B1E32BB9B /* Pods-MineSweeperTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,11 +92,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4A6FBF725D01CEA00126B41 /* Build configuration list for PBXNativeTarget "MineSweeper" */;
 			buildPhases = (
-				3FE29A97E062C93CFCB0565F /* [CP] Check Pods Manifest.lock */,
 				A4A6FBC625D01CE800126B41 /* Sources */,
 				A4A6FBC725D01CE800126B41 /* Frameworks */,
 				A4A6FBC825D01CE800126B41 /* Resources */,
-				B518EE7ACC59960B240BB5B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,48 +150,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3FE29A97E062C93CFCB0565F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MineSweeper-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B518EE7ACC59960B240BB5B8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MineSweeper/Pods-MineSweeper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MineSweeper/Pods-MineSweeper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MineSweeper/Pods-MineSweeper-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		A4A6FBC625D01CE800126B41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -234,8 +157,9 @@
 			files = (
 				A4A6FC0425D01E1D00126B41 /* ButtonCollectionViewCell.swift in Sources */,
 				A45B816F25D2F43F00B294A5 /* InstructionViewController.swift in Sources */,
-				A401D0C125D0258A005CA6A5 /* BombDataManager.swift in Sources */,
+				A401D0C125D0258A005CA6A5 /* GameManager.swift in Sources */,
 				A4A6FBD825D01CE800126B41 /* MineSweeper.xcdatamodeld in Sources */,
+				E3D4D7C12D22921C00AA3F29 /* BombCellDataModel.swift in Sources */,
 				A4A6FBD225D01CE800126B41 /* ViewController.swift in Sources */,
 				A4A6FBCE25D01CE800126B41 /* AppDelegate.swift in Sources */,
 				A45B816A25D2EFDA00B294A5 /* HomeViewController.swift in Sources */,
@@ -383,19 +307,20 @@
 		};
 		A4A6FBF825D01CEA00126B41 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5C0F75653C248389C70FE36 /* Pods-MineSweeper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2VBCC3QCHE;
 				INFOPLIST_FILE = MineSweeper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = zhangyifan.MineSweeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -405,19 +330,20 @@
 		};
 		A4A6FBF925D01CEA00126B41 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C93C3985FD1106767CF0FC8F /* Pods-MineSweeper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2VBCC3QCHE;
 				INFOPLIST_FILE = MineSweeper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = zhangyifan.MineSweeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
