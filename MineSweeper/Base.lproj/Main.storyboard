@@ -255,7 +255,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="juh-2t-kVI" firstAttribute="top" secondItem="75J-er-qK9" secondAttribute="bottom" constant="20" id="54G-Gi-A3h"/>
-                            <constraint firstItem="Ed5-as-22Q" firstAttribute="bottom" secondItem="juh-2t-kVI" secondAttribute="bottom" constant="100" id="L1N-B1-vN4"/>
+                            <constraint firstItem="75J-er-qK9" firstAttribute="centerY" secondItem="ayv-TX-TiU" secondAttribute="centerY" id="6B0-QM-KEt"/>
                             <constraint firstItem="juh-2t-kVI" firstAttribute="leading" secondItem="HjD-Z0-xcc" secondAttribute="leading" id="LLC-6i-KC0"/>
                             <constraint firstItem="HjD-Z0-xcc" firstAttribute="top" secondItem="Ed5-as-22Q" secondAttribute="top" constant="80" id="YVF-ZP-oZZ"/>
                             <constraint firstItem="juh-2t-kVI" firstAttribute="trailing" secondItem="HjD-Z0-xcc" secondAttribute="trailing" id="iEz-U2-wCa"/>

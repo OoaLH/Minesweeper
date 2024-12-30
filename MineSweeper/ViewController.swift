@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         
         configureViews()
         GameManager.shared.delegate = self
+        GameManager.shared.gameStatus = .started
     }
     
     func configureViews() {
